@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
   }
 
-$dark: rgba(27,32,33,1);
+$dark: #445053;
 $dark--hovered: rgba(66,78,81,1);
 $subtle-dark: rgba(27,32,33,0.70);
 $subtle-grey: rgba(212,212,212,1);
@@ -25,11 +25,11 @@ $--transition: all .4s ease-in-out;
 
 @font-face {
     font-family: 'qgx-icons';
-    src:  url('../icons/qgx-icons.eot?r35p19');
-    src:  url('../icons/qgx-icons.eot?r35p19#iefix') format('embedded-opentype'),
-      url('../icons/qgx-icons.ttf?r35p19') format('truetype'),
-      url('../icons/qgx-icons.woff?r35p19') format('woff'),
-      url('../icons/qgx-icons.svg?r35p19#qgx-icons') format('svg');
+    src:  url('../icons/qgx-icons.eot?uvk30o');
+    src:  url('../icons/qgx-icons.eot?uvk30o#iefix') format('embedded-opentype'),
+      url('../icons/qgx-icons.ttf?uvk30o') format('truetype'),
+      url('../icons/qgx-icons.woff?uvk30o') format('woff'),
+      url('../icons/qgx-icons.svg?uvk30o#qgx-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -49,80 +49,94 @@ $--transition: all .4s ease-in-out;
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-api:before {
+  .icon-paperplane:before {
     content: "\e900";
   }
-  .icon-arrow-detail:before {
+  .icon-airplane:before {
     content: "\e901";
   }
-  .icon-arrow:before {
+  .icon-rocket:before {
     content: "\e902";
   }
-  .icon-bank:before {
+  .icon-saque:before {
     content: "\e903";
   }
-  .icon-business:before {
+  .icon-devicealt:before {
     content: "\e904";
   }
-  .icon-cards:before {
+  .icon-pagamentos:before {
     content: "\e905";
   }
-  .icon-check:before {
+  .icon-qrcode:before {
     content: "\e906";
   }
-  .icon-chevron:before {
+  .icon-close:before {
     content: "\e907";
   }
-  .icon-close:before {
+  .icon-menu:before {
     content: "\e908";
   }
-  .icon-devicealt:before {
+  .icon-arrow-detail:before {
     content: "\e909";
   }
-  .icon-emprestimo:before {
+  .icon-bank:before {
     content: "\e90a";
   }
-  .icon-facebook:before {
+  .icon-handshake:before {
     content: "\e90b";
   }
-  .icon-handshake:before {
+  .icon-recarga:before {
     content: "\e90c";
   }
-  .icon-hold:before {
+  .icon-business:before {
     content: "\e90d";
   }
-  .icon-instagram:before {
+  .icon-arrow:before {
     content: "\e90e";
   }
-  .icon-linkedin:before {
+  .icon-chevron:before {
     content: "\e90f";
   }
-  .icon-menu:before {
+  .icon-check:before {
     content: "\e910";
   }
   .icon-messenger:before {
     content: "\e911";
   }
-  .icon-pagamentos:before {
+  .icon-linkedin:before {
     content: "\e912";
   }
-  .icon-qrcode:before {
+  .icon-instagram:before {
     content: "\e913";
   }
-  .icon-recarga:before {
+  .icon-facebook:before {
     content: "\e914";
   }
-  .icon-saque:before {
+  .icon-emprestimo:before {
     content: "\e915";
   }
   .icon-transfer:before {
     content: "\e916";
   }
+  .icon-cards:before {
+    content: "\e917";
+  }
+  .icon-api:before {
+    content: "\e918";
+  }
+  .icon-hold:before {
+    content: "\e919";
+  }
+  
 
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     width: 100%;
+}
+
+.right {
+    float: right;
 }
 
 .dark-bg {
@@ -138,47 +152,20 @@ body {
 }
 
 .heading {
-    font-weight: 600;
-    &.lg {
-        font-size: 40px;
-        line-height: 48px; 
-    }
-
-    &.xmd {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.3;
     &.md {
         font-size: 20px;
-        line-height: 28px;
-    }
-
-    &.sm {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    &.pool-hd {
-        font-size: 24px;
-        line-height: 32px;
     }
 }
 
 .caption {
-    &.lg {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    &.md {
-        font-size: 14px;
-        line-height: 18px;
-    }
-    &.sm {
-        font-size: 13px;
-        line-height: 18px;
-    }
+font-size: 18px;
+font-weight: 300;
+line-height: 1.7;
 }
+
 
 .w-bd, b {
     font-weight: 600;
@@ -210,15 +197,22 @@ body {
 .btn {
     text-decoration: none !important;
     transition: $--transition;
-    box-shadow: $dp-shadow;
     border: 2px solid rgba(255,255,255,0);
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
+
+    &.sm {
+        font-size: 14px;
+        padding: 12px 15px;
+        border-radius: 4px;
+    }
 
     &.lg {
         font-size: 18px;
-        padding: 18px 24px;
+        min-width: 220px;
+        padding: 18px 30px;
         border-radius: 38px;
+        border-radius: 4px;
     }
 
     &.md {
@@ -233,10 +227,15 @@ body {
 
     &.primary-btn {
         background: $primary-color;
-        color: $dark;
+        color: #FFF;
         &:hover {
             background: $primary-color--hovered;
         }
+    }
+
+    &.outline-alt-btn {
+        border: 2px solid rgba(255,178,0,1);
+        color:rgba(255,178,0,1);
     }
 
     &.secondary-btn {
@@ -283,7 +282,7 @@ body {
     text-decoration: none !important;
     transition: $--transition;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     &.primary-link {
         color: $primary-color;
         line-height: 24px;
@@ -483,12 +482,14 @@ form .btn {
     z-index: 5;
     width: 100%;
     padding: 32px 0;
-    & .header-cta {
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    & .btn {
         margin-left: 32px;
     }
     &.fix-header {
         position: fixed;
-        background: #1B2021;
+        background: $dark;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24);
         padding: 16px 0;
         & .main-logo img {
@@ -512,37 +513,24 @@ form .btn {
     .btn {
         display: block;
         width: 100%;
-        margin: 8px 0;
     }
 }
 
 .main-hero {
     background-color: $dark;
-}
-
-.main-hero-container {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-
-    & .hero-content {
-        max-width: 100%;
-        padding: 32px 32px 0;
-
-        & p {
-            margin: 24px 0;
+    padding: 60px 0;
+    & .row {
+        position: relative;
+        z-index: 2;
+        min-height: 800px;
+    }
+    & .featured-asset {
+        position: relative;
+        bottom: -50px;
+        & img {
+            width: 50%;
+            max-width: 400px;
         }
-
-        & .featured-asset {
-
-            img {
-                width: 280px;
-                position: relative;
-                left: -10%;
-            }
-    
-        } 
-        
     }
 }
 
@@ -554,49 +542,162 @@ form .btn {
     }
 }
 
-.detail-asset {
+.white-bg-detail {
     position: absolute;
-    top: -50%;
-    left: -15%;
-}
+    width: 100%;
+    bottom: 94%;
 
-.brand-detail {
-    position: absolute;
-    left: 0;
-    bottom: 8%;
-    right: auto;
-    top: auto;
-
-    & .icon {
-        font-size: 800px;
-        color: rgba(255,255,255,.11);
+    & img {
+        width: 100%;
     }
 }
 
-.post-hero {
-    padding: 32px;
-    height: 530px;
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    & .heading {
+        margin-bottom: 50px;
+        color: #1e1e2d;
+    }
+
+    & .caption {
+        color: #1e1e2d;
+        font-size: 20px;
+    }
+}
+
+.container-conta-digital {
+    background-image: url(../img/illustration-conta-digital.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 470px;
+    height: 540px;
+    margin: 0 auto;
+    position: relative;
+    background-size: contain;
+}
+
+
+.features-cash-in-out
+{
+    padding: 120px 0;
+}
+
+.features-cash-in-out .feature 
+{
+    width: 320px;
+    position: absolute; 
+}
+.features-cash-in-out .cash-in .feature-icon
+{
+    float: right;
+    margin-left: 20px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.80) 100%);
-    box-shadow: $dp-shadow--accent;
-    position: relative;
+}
+.features-cash-in-out .cash-out .feature-icon
+{
+    float: left;
+    margin-right: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.features-cash-in-out .heading 
+{
+    width: 300px;
+    position: absolute; 
+    display: flex;
+    font-size: 22px;
+}
+.features-cash-in-out .cash-arrow
+{
+    margin-top: 10px;
+}
 
-    &:after {
-        content: " ";
-         position: absolute;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-         z-index: -1;
-        background: url(../img/asset-photo-01.jpg) no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;   
-    }
+.features-cash-in-out .cash-in .feature 
+{
+    text-align: right;
+}
+
+.features-cash-in-out h4
+{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #444;
+} 
+
+.features-cash-in-out .cash-in .heading 
+{
+    left: -50px; 
+    top: -90px;
+}
+
+.features-cash-in-out .cash-out .heading 
+{
+    right: -180px; 
+    top: -101px;
+}
+
+.features-cash-in-out h4,
+.features-cash-in-out p 
+{
+    font-size: 15px;
+}
+
+.features-cash-in-out .cash-in .feature.boleto
+{
+    left: -250px; 
+    top: 10px;
+}
+
+.features-cash-in-out .cash-in .feature.transf-in
+{
+    left: -340px; 
+    top: 150px;
+    width: 320px;
+}
+
+.features-cash-in-out .cash-in .feature.vendas
+{
+    left: -340px; 
+    top: 320px;
+}
+
+.features-cash-in-out .cash-in .feature.outros
+{
+    left: -240px; 
+    top: 470px;
+}
+
+.features-cash-in-out .cash-out .feature.pagamentos
+{
+    right: -250px; 
+    top: 10px;
+}
+
+.features-cash-in-out .cash-out .feature.transf-out
+{
+    right: -350px; 
+    top: 150px;
+    width: 330px;
+}
+
+.features-cash-in-out .cash-out .feature.saques
+{
+    right: -340px; 
+    top: 320px;
+}
+
+.features-cash-in-out .cash-out .feature.recargas
+{
+    right: -240px; 
+    top: 470px;
 }
 
 .simple-content {
@@ -619,6 +720,7 @@ form .btn {
 .features {
     padding: 0 0 48px;
     background-color: #FFF;
+    position: relative;
 
     & .title-holder {
         position: relative;
@@ -666,6 +768,8 @@ form .btn {
 }
 
 .our-plans {
+    position: relative;
+    background-color: #FFF;
     
     & .heading-block {
       padding: 40px 0;
@@ -708,21 +812,52 @@ form .btn {
 }
 
 .plan-card {
-    background: rgba(255,255,255,1);
-    box-shadow: $dp-shadow--accent;
-    border-radius: 14px;
+    border-radius: 3px;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    background-color: #fff;
+    text-align: left;
+    padding: 10px 20px 20px;
+    margin-top: 20px;
     overflow: hidden;
-    margin: 16px 0;
+    position: relative;
+
+    & .block-trigger {
+        position: relative;
+        margin-top: 32px;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        padding: 0;
+
+        & .btn {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    & .card-header {
+        & .icon {
+            display: block;
+            padding: 24px 0 16px;
+            color: #f9b104;
+            font-size: 48px;
+        }
+    }
+
+    & .plan-name {
+        font-size: 32px;
+        color: #1e1e2d;
+        font-weight: 300;
+
+        &.white {
+            color: #FFF;
+        }
+    }
 
     &.featured {
         background: $dark;
-
-        & .card-header {
-            padding: 24px 32px;
-            background: rgba(255,255,255,0.03);
-        }
     
-
         & .plan-item {
             display: block;
             margin: 16px 0;
@@ -736,13 +871,7 @@ form .btn {
         }
     }
 
-    & .card-header {
-        padding: 24px 32px;
-        background: rgba(0,0,0,0.02);
-    }
-
     & .card-content {
-        padding: 16px 32px 8px;
 
         & .plan-item {
             display: block;
@@ -775,7 +904,6 @@ form .btn {
         flex-direction: column;
         & .btn {
             width: 100%;
-            margin: 0 0 8px;
         }
     }
 }
@@ -829,6 +957,20 @@ form .btn {
             font-size: 80px;
         }
     }
+}
+
+.bottom-pool-section {
+    margin-top: 32px;
+    padding: 80px 0;
+    background: url(../img/cta-bg.png) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;   
+
+        & .heading {
+            font-size: 28px;
+        }
 }
 
 .bottom-pool {
@@ -1027,6 +1169,17 @@ footer {
     }
 }
 
+.feature-image {
+    width: 90%;
+}
+
+.feature-section {
+    padding: 100px 0;
+    & .heading { 
+        margin-bottom: 40px;
+    }
+}
+
 .image-holder {
     width: 100%;
     border-radius: 8px;
@@ -1183,56 +1336,84 @@ footer {
 
 //Media Queries
 
-@media (max-width: 374px) { 
-    
-    .main-hero-container {
-        height: 100%;
-        padding: 80px 0;
-    }
+@media (max-width: 768px) { 
 
-    .detail-asset {
-        position: absolute;
-        top: -60%;
-        left: -15%;
-    }
-   
+.features-cash-in-out .feature
+{
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+}
+.container-conta-digital
+{
+    width: auto;
+    height: auto;
+    background-position: top;
+    padding-top: 410px;
+}
+
+.features-cash-in-out .heading 
+{
+    width: auto;
+    position: static; 
+    display: flex;
+    font-size: 22px;
+}
+
+.cash-arrow {display: none;}
+
+.features-cash-in-out .cash-in .feature {
+    text-align: left;
+}
+.features-cash-in-out .feature-icon {
+    float: left !important;
+    width: 100px;
+    height: 80px !important;
+    margin-left: 0 !important;
+    margin-right: 20px;
+}
+
+.features-cash-in-out .cash-out
+{
+    margin-top: 70px;
+}
+
 }
 
 @media (min-width: 768px) { 
+
+    .right-al {
+        text-align: right;
+    }
+
+    .main-hero {
+        background-color: $dark;
+        padding: 60px 0;
+
+        & .heading {
+            margin-bottom: 32px;
+        }
+
+        & .btn {
+            margin: 0;
+            margin-top: 24px;
+            max-width: 200px;
+        }
+        & .featured-asset {
+            & img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    }
 
     .benefits {
         & .benefit {
             margin: 40px 0;
         }
     }
-
-    .main-hero {
     
-        & .hero-content {
-            margin-top: 32px;
-            text-align: center;
-    
-            & .featured-asset {
-
-                text-align: center;
-    
-                img {
-                    width: 70%;
-                    position: relative;
-                    left: auto;
-                }
-        
-            } 
-            
-        }
-    }
-
-    .detail-asset {
-        position: absolute;
-        top: -40%;
-        left: auto;
-        right: -55%;
-    }
 
     .action-holder {
         margin: 24px auto;
@@ -1245,11 +1426,6 @@ footer {
                 width: 100%;
                 margin: 0;
             }
-        }
-        & .btn {
-            display: initial;
-            width: auto;
-            margin: 0 8px;
         }
     }
 
@@ -1267,6 +1443,11 @@ footer {
 }
 
 @media (min-width: 992px) { 
+
+    .plan-row {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
 
     .signup-hero {
         & .brand-detail {
@@ -1359,49 +1540,23 @@ footer {
 
 
 .heading {
-    &.lg {
-        font-size: 56px;
-        line-height: 72px; 
-    }
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.3;
+        &.md {
+            font-size: 20px;
+        }
+}
 
-    &.xmd {
-        font-size: 40px;
-        line-height: 48px;
-    }
-
-    &.md {
-        font-size: 32px;
-        line-height: 40px;
-    }
-
-    &.sm {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
-    &.pool-hd {
-        font-size: 40px;
-        line-height: 48px;
-    }
+.centered {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .caption {
-    &.lg {
-        font-size: 24px;
-        line-height: 32px;
-    }
-    &.xmd {
-        font-size: 18px;
-        line-height: 32px;
-    }
-    &.md {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    &.sm {
-        font-size: 14px;
-        line-height: 18px;
-    }
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
 }
 
 .featured-span {
@@ -1487,7 +1642,6 @@ footer {
 }
 
 .heading-block {
-    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1497,13 +1651,6 @@ footer {
 
 .bt-spread {
     padding-bottom: 80px;
-}
-
-.plan-card {
-    & .btn {
-    width: 100%;
-    display: block;
-    }
 }
 
 .bottom-pool {
@@ -1537,7 +1684,46 @@ footer {
 
 }
 
+@media (min-width: 1200px) { 
+
+    .plan-card {
+        height: 100%;
+        min-height: 890px;
+        position: relative;
+        & .block-trigger {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            padding: 16px;
+        }
+        & .btn {
+        width: 100%;
+        display: block;
+        }
+    }
+}
+
 @media (min-width: 1300px) { 
+
+    .plan-card {
+        height: 100%;
+        min-height: 890px;
+        position: relative;
+        & .block-trigger {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            padding: 16px;
+        }
+        & .btn {
+        width: 100%;
+        display: block;
+        }
+    }
 
 
 .main-hero-container {
